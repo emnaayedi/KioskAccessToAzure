@@ -1,4 +1,5 @@
-﻿using Azure.Storage.Blobs;
+﻿using Azure.Storage;
+using Azure.Storage.Blobs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace AccessForKioskReport
             // Create a BlobServiceClient object which will be used to create a container client
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
-            string blobContainerName = "soaktestreports".ToString();
+            string blobContainerName = "soaktestreports";
             // Find the container and return a container client object
 
             BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
@@ -25,7 +26,15 @@ namespace AccessForKioskReport
        .OrderByDescending(m => m.Properties.LastModified)
     .ToList()
     .First();
-            Response.RedirectPermanent("https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + latestBlob.Name + "?sp=r&st=2022-09-08T18:30:50Z&se=2022-09-09T02:30:50Z&spr=https&sv=2021-06-08&sr=b&sig=iPiiCAWL2qqFHRVph30ZA6bTlmwX4ziHI2%2BF7FMBlFw%3D");
+            Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
+            {
+                BlobContainerName = "soaktestreports",
+                BlobName = latestBlob.Name,
+                ExpiresOn = DateTime.UtcNow.AddDays(7),//Let SAS token expire after 5 minutes.
+            };
+            blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
+            var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
+            Response.RedirectPermanent("https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + latestBlob.Name + "?"+sasToken.ToString());
         }
 
     }
