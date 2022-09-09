@@ -12,7 +12,7 @@ namespace AccessForKioskReport
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string connectionString = Environment.GetEnvironmentVariable("AZURE_STORAGE_CONNECTION_STRING");
+            string connectionString = "DefaultEndpointsProtocol=https;AccountName=pdfreportsaquila;AccountKey=QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==;EndpointSuffix=core.windows.net";
 
             // Create a BlobServiceClient object which will be used to create a container client
             BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
