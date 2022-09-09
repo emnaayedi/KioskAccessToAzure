@@ -9,16 +9,19 @@ namespace AccessForKioskReport
 {
     public partial class RegistrationForm : System.Web.UI.Page
     {
+        public string filename;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+           
+        
         }
         protected void Button1_Click(object sender, EventArgs e)
         {
 
             if (TextBox3.Text == "Aquila2020#")
             {
-                Server.Transfer("RedirectToPDF.aspx");
+                string fileName = Request.QueryString["pdf"].ToString();
+                Server.Transfer("RedirectToPDF.aspx?fileName="+fileName,true);
 
             }
 
