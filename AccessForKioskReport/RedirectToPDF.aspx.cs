@@ -13,30 +13,38 @@ namespace AccessForKioskReport
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-    //        string connectionString = "DefaultEndpointsProtocol=https;AccountName=pdfreportsaquila;AccountKey=QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==;EndpointSuffix=core.windows.net";
+            //        string connectionString = "DefaultEndpointsProtocol=https;AccountName=pdfreportsaquila;AccountKey=QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==;EndpointSuffix=core.windows.net";
 
-    //        // Create a BlobServiceClient object which will be used to create a container client
-    //        BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
+            //        // Create a BlobServiceClient object which will be used to create a container client
+            //        BlobServiceClient blobServiceClient = new BlobServiceClient(connectionString);
 
-    //        string blobContainerName = "soaktestreports";
-    //        // Find the container and return a container client object
+            //        string blobContainerName = "soaktestreports";
+            //        // Find the container and return a container client object
 
-    //        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
-    //        var latestBlob = containerClient.GetBlobs()
-    //   .OrderByDescending(m => m.Properties.LastModified)
-    //.ToList()
-    //.First();
-            var pdf = Request.QueryString["fileName"].ToString();
-
-            Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
+            //        BlobContainerClient containerClient = blobServiceClient.GetBlobContainerClient(blobContainerName);
+            //        var latestBlob = containerClient.GetBlobs()
+            //   .OrderByDescending(m => m.Properties.LastModified)
+            //.ToList()
+            //.First();
+            var password = Request.QueryString["password"].ToString();
+            if (password == "Aquila2020#")
             {
-                BlobContainerName = "soaktestreports",
-                BlobName = pdf,
-                ExpiresOn = DateTime.UtcNow.AddDays(7),//Let SAS token expire after 5 minutes.
-            };
-            blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
-            var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-            Response.RedirectPermanent("https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" +pdf  + "?"+sasToken.ToString());
+                var pdf = Request.QueryString["fileName"].ToString();
+
+                Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
+                {
+                    BlobContainerName = "soaktestreports",
+                    BlobName = pdf,
+                    ExpiresOn = DateTime.UtcNow.AddDays(7),//Let SAS token expire after 5 minutes.
+                };
+                blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
+                var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
+                Server.Transfer("https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken.ToString());
+            }
+            else
+            {
+                Server.Transfer("RegistrationForm.aspx");
+            }
         }
 
     }

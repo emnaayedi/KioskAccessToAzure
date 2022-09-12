@@ -21,7 +21,7 @@ namespace AccessForKioskReport
             if (TextBox3.Text == "Aquila2020#")
             {
                 string fileName = Request.QueryString["pdf"].ToString();
-                Server.Transfer("RedirectToPDF.aspx?fileName="+fileName,true);
+                Server.Transfer("RedirectToPDF.aspx?fileName="+fileName+"&password="+ TextBox3.Text, false);
 
             }
 
