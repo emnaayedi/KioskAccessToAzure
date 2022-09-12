@@ -5,9 +5,12 @@
   
 <html xmlns="http://www.w3.org/1999/xhtml">  
 <head runat="server">  
+    <link href="Styles.css" rel="stylesheet" type="text/css" />
+
     <title></title>  
 </head>  
-<body>  
+<body> 
+    <div class="center">
     <form id="form1" runat="server">  
         <div>  
             <table class="auto-style1">  
@@ -27,5 +30,6 @@
             </table>  
         </div>  
     </form>  
+        </div>
 </body>  
 </html>  

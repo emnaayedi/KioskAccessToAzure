@@ -204,6 +204,7 @@
   <ItemGroup>
     <Content Include="RedirectToPDF.aspx" />
     <Content Include="RegistrationForm.aspx" />
+    <Content Include="Styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
