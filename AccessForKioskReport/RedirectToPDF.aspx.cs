@@ -5,12 +5,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace AccessForKioskReport
 {
     public partial class RedirectToPDF : System.Web.UI.Page
     {
+        public string URL { get; set; }
         protected void Page_Load(object sender, EventArgs e)
         {
     //        string connectionString = "DefaultEndpointsProtocol=https;AccountName=pdfreportsaquila;AccountKey=QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==;EndpointSuffix=core.windows.net";
@@ -37,7 +39,10 @@ namespace AccessForKioskReport
             };
             blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
             var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-            Response.RedirectPermanent("https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" +pdf  + "?"+sasToken.ToString());
+            URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken;
+
+            iframe.Attributes.Add("src", URL);
+
         }
 
     }

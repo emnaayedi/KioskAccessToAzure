@@ -232,3 +232,7 @@ C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\De
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.csproj.CoreCompileInputs.cache
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.dll
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.pdb
+C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Features.xml
