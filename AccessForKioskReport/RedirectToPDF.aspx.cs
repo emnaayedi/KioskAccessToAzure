@@ -39,7 +39,7 @@ namespace AccessForKioskReport
             };
             blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
             var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-            URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken;
+            URL = "//pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken;
 
             //iframe.Attributes.Add("src",  URL + "&embedded=true");
             iframe2.Attributes.Add("src", URL + "&embedded=true");
