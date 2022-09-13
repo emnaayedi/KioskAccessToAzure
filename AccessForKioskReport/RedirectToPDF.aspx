@@ -8,10 +8,10 @@
     <title></title>  
 </head>  
 <body> 
-    
 
-               <iframe runat="server" class="iframe" type="application/pdf" id="iframe" allow="fullscreen" loading="lazy" scrolling="auto" frameborder="0" style="height:100%; width:100%;"></iframe>
 
+     <iframe runat="server" class="iframe" type="application/pdf" id="iframe" frameborder="0" style="height:100%; width:100%;"></iframe>
+       
 
 </body>  
 </html>  

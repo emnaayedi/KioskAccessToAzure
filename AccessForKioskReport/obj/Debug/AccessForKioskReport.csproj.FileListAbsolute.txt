@@ -228,7 +228,6 @@ C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Sy
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\System.ValueTuple.xml
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.csproj.AssemblyReference.cache
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.csproj.CoreCompileInputs.cache
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.dll
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.pdb
@@ -236,3 +235,4 @@ C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Mi
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Abstractions.xml
 C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\EmnaAyedi\Desktop\Aquila\KioskAccessToAzure\AccessForKioskReport\obj\Debug\AccessForKioskReport.csproj.CopyComplete

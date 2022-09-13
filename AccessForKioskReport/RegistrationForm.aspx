@@ -9,7 +9,7 @@
 
     <title></title>  
 </head>  
-<body> 
+<body> <div class="layout">
     <div class="center">
     <form id="form1" runat="server">  
         <div>  
@@ -30,6 +30,6 @@
             </table>  
         </div>  
     </form>  
-        </div>
+        </div></div>
 </body>  
 </html>  
