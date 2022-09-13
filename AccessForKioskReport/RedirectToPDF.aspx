@@ -10,13 +10,8 @@
 <body> 
     
 
-               <iframe runat="server" class="iframe" id="iframe" allow="fullscreen" loading="lazy" scrolling="auto" frameborder="0" style="height:100%; width:100%;"></iframe>
+               <iframe runat="server" class="iframe" type="application/pdf" id="iframe" allow="fullscreen" loading="lazy" scrolling="auto" frameborder="0" style="height:100%; width:100%;"></iframe>
 
 
 </body>  
 </html>  
-<script>
-    document.getElementById("iframe").contentWindow.onload = function () {
-        this.document.getElementsByTagName("img")[0].style.width = "100%";
-    };
-</script>
