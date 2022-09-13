@@ -48,12 +48,12 @@ body {
 .textbox, .textbox:focus, .textbox:active {
     position: relative;
     width: 65%;
-    height: 50px;
+    height: 15%;
     background-color: #3D3F4D !important;
     box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 20px;
     line-height: 36px;
@@ -66,8 +66,8 @@ body {
 }
 #form1 {
     /* Size & position */
-    width: 90%;
-    height:300px;
+    width: 120%;
+    height:200%;
     margin: 60px auto 30px;
     padding: 10px;
     position: relative; /* For the submit button positioning */
@@ -80,7 +80,7 @@ body {
     /* Size and position */
     width: 90%;
     margin-left:5%;
-    height: 50px;
+    height: 15%;
     float: left;
     position: relative;
     /* Styles */
@@ -108,7 +108,7 @@ body {
 }
 #title {
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 36px;
     line-height: 48px;
