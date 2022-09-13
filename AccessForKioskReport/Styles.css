@@ -120,3 +120,12 @@ body {
     font-family: 'Lato', Calibri, Arial, sans-serif;
     margin-bottom: 30%;
 }
+iframe {
+    width: 100% !important;
+}
+@media screen and (max-width:512px) {
+
+    iframe {
+        width: 100% !important;
+    }
+}
