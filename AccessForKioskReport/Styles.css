@@ -1,5 +1,4 @@
-﻿body {
-}
+﻿
 .center {
     position: absolute;
     left: 50%;
@@ -8,3 +7,12 @@
     padding: 10px;
 }
 
+html, body {
+    height: 100%;
+    overflow: hidden
+}
+
+body {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch
+}

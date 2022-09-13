@@ -8,12 +8,9 @@
     <title></title>  
 </head>  
 <body> 
-<div style="position: absolute; overflow: hidden; left: 0px; top: 0px; border: solid 2px #555; width:594px; height:332px;">
-<div style="overflow: hidden; margin-top: -100px; margin-left: -25px;">
-</div>
 
-     <iframe runat="server" class="iframe" id="iframe" scrolling="no" frameborder="0" style="border:none; overflow:scroll;position:absolute; width:100%; height:100vh" ></iframe>
+
+     <iframe runat="server" class="iframe" id="iframe" height="100%" width="100%" scrolling="no" frameborder="0" ></iframe>
        
-        </div></div>
 </body>  
 </html>  
