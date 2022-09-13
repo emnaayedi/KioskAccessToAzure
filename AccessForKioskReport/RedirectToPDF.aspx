@@ -10,7 +10,7 @@
 <body> 
     <div >
 
-     <iframe runat="server" class="iframe" id="iframe" scrolling="yes" frameborder="0" style="border:none; overflow:scroll;position:absolute; width:100%; min-height:100%;" ></iframe>
+     <iframe runat="server" class="iframe" id="iframe" scrolling="yes" frameborder="0" style="border:none; overflow:scroll;position:absolute; width:100%; height:100vh" ></iframe>
        
         </div>
 </body>  
