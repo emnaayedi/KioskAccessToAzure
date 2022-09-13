@@ -10,8 +10,7 @@
 <body> 
 
 
-<%--     <iframe runat="server" class="iframe" type="application/pdf" id="iframe" frameborder="0" style="height:100%; width:100%;"></iframe>--%>
+    <iframe runat="server" class="iframe" type="application/pdf" id="iframe" frameborder="0" allowfullscreen="true" style="height:100%; width:100%;"></iframe>
        
-    <embed runat="server" id="iframe2" class="iframe" type="application/pdf" style="height:100%; width:100%;" />
 </body>  
 </html>  

@@ -15,12 +15,12 @@ namespace AccessForKioskReport
     {
 
         /// <summary>
-        /// iframe2 control.
+        /// iframe control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlEmbed iframe2;
+        protected global::System.Web.UI.HtmlControls.HtmlIframe iframe;
     }
 }

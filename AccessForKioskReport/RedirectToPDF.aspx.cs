@@ -42,7 +42,7 @@ namespace AccessForKioskReport
             URL = "//pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken;
 
             //iframe.Attributes.Add("src",  URL + "&embedded=true");
-            iframe2.Attributes.Add("src", URL + "&embedded=true");
+            iframe.Attributes.Add("src", URL + "&embedded=true");
 
         }
 
