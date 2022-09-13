@@ -48,7 +48,8 @@ body {
 .textbox, .textbox:focus, .textbox:active {
     position: relative;
     width: 70%;
-    height: 40px;
+    height: 30%;
+    padding:2%;
     background-color: #3D3F4D !important;
     box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
