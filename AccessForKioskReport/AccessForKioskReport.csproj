@@ -208,7 +208,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="back.png" />
+    <Content Include="images\aquila-logo.png" />
+    <Content Include="images\aquila.png" />
+    <Content Include="images\back.png" />
+    <Content Include="images\lock.png" />
     <Content Include="RedirectToPDF.aspx" />
     <Content Include="RegistrationForm.aspx" />
     <Content Include="Style.js" />

@@ -16,19 +16,103 @@ body {
     overflow: auto;
     -webkit-overflow-scrolling: touch
 }
-.layout{
-     position: absolute;
-   
+.layout {
+    position: absolute;
     background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
-    
-mix-blend-mode: multiply;
+    mix-blend-mode: multiply;
+    background-image: url("images/back.png");
+    height: 100%;
+    width: 100%;
+    mix-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#logo {
+    position: absolute;
+    background-image: url("images/aquila-logo.png");
+    width: 257px;
+    height: 75px;
+    left: 42px;
+    top: 23px;
+}
 
-background-image: url("back.png");
-
-height: 100%;
-width:100%;
- mix-blend-mode: multiply;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+#logo2 {
+    position: absolute;
+    width: 191px;
+    height: 56px;
+    left: 267px;
+    top: 36px;
+    background-image: url("images/aquila.png");
+}
+.textbox, .textbox:focus, .textbox:active {
+    position: relative;
+    width: 65%;
+    height: 50px;
+    background-color: #3D3F4D !important;
+    box-shadow: -2px 4px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 36px;
+    /* identical to box height, or 145% */
+    padding-left: 32px;
+    border: none;
+    /* text-01 (kiosk) */
+    -webkit-appearance: none;
+    color: #F2F2F2;
+}
+#form1 {
+    /* Size & position */
+    width: 90%;
+    height:300px;
+    margin: 60px auto 30px;
+    padding: 10px;
+    position: relative; /* For the submit button positioning */
+    /* Styles */
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
+    border-radius: 5px;
+    background: linear-gradient(#eeefef, #ffffff 10%);
+}
+#Button1 {
+    /* Size and position */
+    width: 90%;
+    margin-left:5%;
+    height: 50px;
+    float: left;
+    position: relative;
+    /* Styles */
+    box-shadow: inset 0 1px rgba(255,255,255,0.3);
+    border-radius: 3px;
+    cursor: pointer;
+    /* Font styles */
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 20px;
+    line-height: 36px; /* Same as height */
+    text-align: center;
+    font-weight: bold;
+    background: linear-gradient(#34a5cf, #2a8ac4);
+    border: 1px solid #2b8bc7;
+    color: #ffffff;
+    text-shadow: 0 -1px rgba(0,0,0,0.3);
+    text-decoration: none;
+    margin-top:20px;
+}
+#lockimage {
+    width: 40px;
+    height: 40px;
+    margin-left: 3%;
+    margin-bottom: -10px;
+}
+#title {
+    font-style: normal;
+    font-weight: normal;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    margin-bottom: 70px;
 }
