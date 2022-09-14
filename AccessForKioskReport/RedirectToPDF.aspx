@@ -4,18 +4,23 @@
 <html xmlns="http://www.w3.org/1999/xhtml">  
 <head runat="server">  
 
+      <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 
     <link href="Styles.css" rel="stylesheet" type="text/css" />
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
    
      <script>
-         document.getElementById("iframe").contentWindow.onload = function () {
-             this.document.getElementsByTagName("img")[0].style.height = "100%";
-         };
-</script>
+         $("#iframe").on("load", function (e) {
+             $("#eIphoneHack", document.getElementById("eInnerWnd").contentWindow.document).css("display", "none").css("display", "initial");
+         }
+        
+     </script>
     <title></title>  
-</head>  <body>    <form><div id="wrapper" style="width: 100%; height: 100%; overflow: auto; -webkit-overflow-scrolling: touch;">
-    <iframe runat="server" class="iframe" type="application/pdf"   scrolling="no" id="iframe" frameborder="0" width="1000" height="600"  ></iframe>
+</head>  <body>    <form><div id="scroll-wrapper" >
+    <iframe runat="server" class="iframe" type="application/pdf"   scrolling="no" id="iframe" frameborder="0" width="1000" height="2000"  >
+      
+    </iframe>
+      <span id="eIphoneHack"></span>
            </div> 
         </form>
 </body>  
