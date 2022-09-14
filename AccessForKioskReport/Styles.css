@@ -126,6 +126,11 @@ iframe {
 @media screen and (max-width:512px) {
 
     iframe {
-        width: 100% !important;
+        height: 100% !important;
+        padding-bottom: -400px !important;
     }
+}
+iframe {
+    height: 100% !important;
+    padding-bottom:-400px!important;
 }
