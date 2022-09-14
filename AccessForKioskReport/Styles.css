@@ -160,7 +160,13 @@
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
+    #container{
+        min-height:2000px;
+    }
+    .embed{
+        min-height:1500px!important;
 
+    }
     #logo {
         position: relative;
         background-image: url("images/aquila-logo.png");
