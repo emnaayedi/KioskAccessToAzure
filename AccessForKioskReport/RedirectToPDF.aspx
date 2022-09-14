@@ -7,17 +7,16 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 
     <link href="Styles.css" rel="stylesheet" type="text/css" />
-     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
    
      <script>
          $("#iframe").on("load", function (e) {
-             $("#eIphoneHack", document.getElementById("eInnerWnd").contentWindow.document).css("display", "none").css("display", "initial");
+             $("#eIphoneHack", document.getElementById("iframe").contentWindow.document).css("display", "none").css("display", "initial");
          }
         
      </script>
     <title></title>  
-</head>  <body>    <form><div id="scroll-wrapper"  style="overflow:auto;-webkit-overflow-scrolling:touch">>
-    <iframe runat="server" height="100%" width="100%"   allowtransparency="true" id="iframe"   >
+</head>  <body>    <form><div id="scroll-wrapper"  style="overflow:auto;-webkit-overflow-scrolling:touch">
+    <iframe runat="server" height="100%" width="100%"  type="application/pdf" allowtransparency="true" id="iframe"   >
       
     </iframe>
       <span id="eIphoneHack"></span>

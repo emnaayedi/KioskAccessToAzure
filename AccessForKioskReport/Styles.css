@@ -20,15 +20,13 @@ body {
 }
 
 iframe {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    border: 0;
-    z-index: 9999;
+   
+    width: 100%!important;
+    height: 100vh!important;
+   
     /* overflow: auto; */
 }
-@media screen and (max-width:512px) {
+/*@media screen and (max-width:512px) {
 
   
     .textbox, .textbox:focus, .textbox:active {
@@ -54,12 +52,12 @@ iframe {
             top: 0;
             width: 100%;
         }
-}
+}*/
 
     
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     
     #logo {
         position: relative;
@@ -87,20 +85,20 @@ iframe {
         font-weight: bold;
         font-family: 'Lato', Calibri, Arial, sans-serif;
         font-size: 20px;
-        line-height: 36px;
+        line-height: 36px;*/
         /* identical to box height, or 145% */
-        padding-left: 5%;
-        border: none;
+        /*padding-left: 5%;
+        border: none;*/
         /* text-01 (kiosk) */
-        -webkit-appearance: none;
+        /*-webkit-appearance: none;
         color: #F2F2F2;
         text-shadow: 0 -1px rgba(0,0,0,0.3);
         text-decoration: none;
     }
 
-    #form1 {
+    #form1 {*/
         /* Size & position */
-        background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
+        /*background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
         mix-blend-mode: multiply;
         background-image: url("images/back.png");
         mix-blend-mode: multiply;
@@ -108,35 +106,35 @@ iframe {
         background-repeat: no-repeat;
         background-size: cover;
         width: 80%;
-        height: 90%;
+        height: 90%;*/
         /*    margin: 60px auto 30px;
-*/ padding: 10px;
+*/ /*padding: 10px;
         margin-top: 10%;
         margin-left: 10%;
         margin-right: 10%;
         margin-bottom: 10%;
-        position: relative; /* For the submit button positioning */
+        position: relative;*/ /* For the submit button positioning */
         /* Styles */
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
+        /*box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
         border-radius: 5px;
     }
 
     #Button1 {
-        border-radius: 10px;
+        border-radius: 10px;*/
         /* Size and position */
-        width: 90%;
+        /*width: 90%;
         margin-left: 7%;
         height: 40%;
         float: left;
-        position: relative;
+        position: relative;*/
         /* Styles */
-        box-shadow: inset 0 1px rgba(255,255,255,0.3);
-        cursor: pointer;
+        /*box-shadow: inset 0 1px rgba(255,255,255,0.3);
+        cursor: pointer;*/
         /* Font styles */
-        font-family: 'Lato', Calibri, Arial, sans-serif;
+        /*font-family: 'Lato', Calibri, Arial, sans-serif;
         font-size: 20px;
-        line-height: 36px; /* Same as height */
-        text-align: center;
+        line-height: 36px;*/ /* Same as height */
+        /*text-align: center;
         font-weight: bold;
         background: linear-gradient(#34a5cf, #2a8ac4);
         border: 1px solid #2b8bc7;
@@ -145,7 +143,7 @@ iframe {
         text-decoration: none;
         margin-top: 20px;
         margin-bottom: 5%;
-    }
+    }*/
 
   /*  #lockimage {
         width: 40px;
@@ -166,10 +164,10 @@ iframe {
     }*/
 
   
-}
+/*}*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+/*@media only screen and (min-width: 600px) {
     #container{
         min-height:2000px;
     }
@@ -203,20 +201,20 @@ iframe {
         font-weight: bold;
         font-family: 'Lato', Calibri, Arial, sans-serif;
         font-size: 20px;
-        line-height: 36px;
+        line-height: 36px;*/
         /* identical to box height, or 145% */
-        padding-left: 5%;
-        border: none;
+        /*padding-left: 5%;
+        border: none;*/
         /* text-01 (kiosk) */
-        -webkit-appearance: none;
+        /*-webkit-appearance: none;
         color: #F2F2F2;
         text-shadow: 0 -1px rgba(0,0,0,0.3);
         text-decoration: none;
     }
 
-    #form1 {
+    #form1 {*/
         /* Size & position */
-        background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
+        /*background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
         mix-blend-mode: multiply;
         background-image: url("images/back.png");
         mix-blend-mode: multiply;
@@ -224,35 +222,35 @@ iframe {
         background-repeat: no-repeat;
         background-size: cover;
         width: 80%;
-        height: 90%;
+        height: 90%;*/
         /*    margin: 60px auto 30px;
-*/ padding: 10px;
+*/ /*padding: 10px;
         margin-top: 10%;
         margin-left: 10%;
         margin-right: 10%;
         margin-bottom: 10%;
-        position: relative; /* For the submit button positioning */
+        position: relative;*/ /* For the submit button positioning */
         /* Styles */
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
+        /*box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
         border-radius: 5px;
     }
 
     #Button1 {
-        border-radius: 10px;
+        border-radius: 10px;*/
         /* Size and position */
-        width: 90%;
+        /*width: 90%;
         margin-left: 7%;
         height: 40%;
         float: left;
-        position: relative;
+        position: relative;*/
         /* Styles */
-        box-shadow: inset 0 1px rgba(255,255,255,0.3);
-        cursor: pointer;
+        /*box-shadow: inset 0 1px rgba(255,255,255,0.3);
+        cursor: pointer;*/
         /* Font styles */
-        font-family: 'Lato', Calibri, Arial, sans-serif;
+        /*font-family: 'Lato', Calibri, Arial, sans-serif;
         font-size: 20px;
-        line-height: 36px; /* Same as height */
-        text-align: center;
+        line-height: 36px;*/ /* Same as height */
+        /*text-align: center;
         font-weight: bold;
         background: linear-gradient(#34a5cf, #2a8ac4);
         border: 1px solid #2b8bc7;
@@ -261,7 +259,7 @@ iframe {
         text-decoration: none;
         margin-top: 20px;
         margin-bottom: 5%;
-    }
+    }*/
 
     /*  #lockimage {
         width: 40px;
@@ -282,25 +280,25 @@ iframe {
     }*/
 
  
-}
+/*}*/
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/*@media only screen and (min-width: 768px) {
     .example {
         background: blue;
     }
-}
+}*/
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/*@media only screen and (min-width: 992px) {
     .example {
         background: orange;
     }
-}
+}*/
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+/*@media only screen and (min-width: 1200px) {
     .example {
         background: pink;
     }
-}
+}*/
