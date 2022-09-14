@@ -16,7 +16,7 @@
      </script>
     <title></title>  
 </head>  <body>    <form><div id="scroll-wrapper"  style="overflow:auto;-webkit-overflow-scrolling:touch">
-    <iframe runat="server" height="100%" width="100%"  type="application/pdf" allowtransparency="true" id="iframe"   >
+    <iframe runat="server" height="100%" width="100%"  type="application/pdf" aria-autocomplete allowtransparency="true" id="iframe"   >
       
     </iframe>
       <span id="eIphoneHack"></span>
