@@ -1,48 +1,37 @@
 ﻿
-.center {
+/*.center {
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     padding: 10px;
-}
+}*/
 
 html, body {
     height: 100%;
-    overflow: hidden
+    overflow: scroll
 }
 
 body {
-    overflow: auto;
+    overflow: scroll;
     -webkit-overflow-scrolling: touch
 }
 .layout {
-    position: absolute;
-    background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
-    mix-blend-mode: multiply;
-    background-image: url("images/back.png");
-    height: 100%;
-    width: 100%;
-    mix-blend-mode: multiply;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+/*    background: linear-gradient(#eeefef, #ffffff 10%);
+*/}
 #logo {
-    position: absolute;
+    position: relative;
     background-image: url("images/aquila-logo.png");
     width: 257px;
     height: 75px;
-    left: 42px;
-    top: 23px;
+  
 }
 
 #logo2 {
-    position: absolute;
+    position: relative;
     width: 191px;
     height: 56px;
-    left: 267px;
-    top: 36px;
+  
     background-image: url("images/aquila.png");
 }
 .textbox, .textbox:focus, .textbox:active {
@@ -69,17 +58,28 @@ body {
 }
 #form1 {
     /* Size & position */
-    width: 100%;
-    height:fit-content;
-    margin: 60px auto 30px;
-    padding: 10px;
+    background: linear-gradient(180deg, rgba(66, 0, 102, 0.22) 0%, rgba(47, 1, 71, 0.83) 100%);
+    mix-blend-mode: multiply;
+    background-image: url("images/back.png");
+    mix-blend-mode: multiply;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 80%;
+    height: 1100px;
+    /*    margin: 60px auto 30px;
+*/ padding: 10px;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
     position: relative; /* For the submit button positioning */
     /* Styles */
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
-    background: linear-gradient(#eeefef, #ffffff 10%);
 }
 #Button1 {
+    border-radius: 10px;
     /* Size and position */
     width: 90%;
     margin-left: 7%;
@@ -88,7 +88,6 @@ body {
     position: relative;
     /* Styles */
     box-shadow: inset 0 1px rgba(255,255,255,0.3);
-    border-radius: 3px;
     cursor: pointer;
     /* Font styles */
     font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -129,8 +128,33 @@ iframe {
         height: 100% !important;
         padding-bottom: -400px !important;
     }
+    .textbox, .textbox:focus, .textbox:active {
+        height: 80px!important;
+        width: 300px!important;
+    }
+        #Button1 {
+        height: 80px!important;
+        width: 300px!important;
+    }
+    .moduletablecoverage-iframe {
+        overflow: hidden;
+        position: relative;
+        min-height: 945px;
+        margin: 40px -15px;
+    }
+
+        .moduletablecoverage-iframe iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
 }
-iframe {
+
+        iframe {
     height: 100% !important;
     padding-bottom:-400px!important;
 }
+
