@@ -8,7 +8,7 @@
     <link href="Styles.css" rel="stylesheet" type="text/css" />
      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
     <style>
-      #container { overflow: auto; -webkit-overflow-scrolling: touch; height: 500px; }
+      #container { overflow: auto; -webkit-overflow-scrolling: touch; height:500px; }
     </style>
   <%--   <script>
          document.getElementById("iframe").contentWindow.onload = function () {
@@ -16,7 +16,7 @@
          };
 </script>--%>
     <title></title>  
-</head>  <body>    <form>    <div id="container">    <iframe runat="server" class="iframe" type="application/pdf"   scrolling="auto" id="iframe" frameborder="0" allowfullscreen="true" style="height: -webkit-fill-available;width: -webkit-fill-available" ></iframe>
+</head>  <body>    <form>    <div id="container">    <embed runat="server" class="iframe" type="application/pdf"   scrolling="auto" id="iframe" frameborder="0" allowfullscreen="true"  />
            </div> 
         </form>
 </body>  

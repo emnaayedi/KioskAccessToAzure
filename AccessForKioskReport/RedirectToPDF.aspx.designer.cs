@@ -21,6 +21,6 @@ namespace AccessForKioskReport
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlIframe iframe;
+        protected global::System.Web.UI.HtmlControls.HtmlEmbed iframe;
     }
 }
