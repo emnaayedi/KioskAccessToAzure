@@ -16,8 +16,8 @@
         
      </script>
     <title></title>  
-</head>  <body>    <form><div id="scroll-wrapper" >
-    <iframe runat="server" class="iframe"    allowtransparency="true" id="iframe" frameborder="0"   >
+</head>  <body>    <form><div id="scroll-wrapper"  style="overflow:auto;-webkit-overflow-scrolling:touch">>
+    <iframe runat="server" height="100%" width="100%"   allowtransparency="true" id="iframe"   >
       
     </iframe>
       <span id="eIphoneHack"></span>
