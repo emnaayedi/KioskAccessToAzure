@@ -2,6 +2,7 @@
 using Azure.Storage.Blobs;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -13,6 +14,8 @@ namespace AccessForKioskReport
     public partial class RedirectToPDF : System.Web.UI.Page
     {
         public string URL { get; set; }
+        public string TOKEN { get; set; }
+
         protected void Page_Load(object sender, EventArgs e)
         {
     //        string connectionString = "DefaultEndpointsProtocol=https;AccountName=pdfreportsaquila;AccountKey=QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==;EndpointSuffix=core.windows.net";
@@ -38,11 +41,11 @@ namespace AccessForKioskReport
                 ExpiresOn = DateTime.UtcNow.AddMinutes(1),//Let SAS token expire after 5 minutes.
             };
             blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
-            var sasToken = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-            URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + sasToken;
+            TOKEN = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
+            URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + pdf + "?" + TOKEN;
             iframe.Attributes.Add("src", URL);
             //Response.Clear();
-        
+
 
             //Response.AddHeader("contentType", "application/pdf");
             //Response.AppendHeader("Content-Disposition", "attachment; filename=" + pdf);
