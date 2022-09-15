@@ -1,25 +1,8 @@
 ﻿using Azure.Storage;
-using Azure.Storage.Blobs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
 using System.IO;
 using iTextSharp.text;
-using iTextSharp.text.html.simpleparser;
-using iTextSharp.tool.xml;
-using System.Net;
 using iTextSharp.text.pdf;
-using Microsoft.PowerBI.Api.Models;
 
 namespace AccessForKioskReport
 {
@@ -36,7 +19,6 @@ namespace AccessForKioskReport
             DIRECTORY = Server.MapPath("~/reports");
             if (Directory.Exists(DIRECTORY))
             {
-
                 foreach (string filename in Directory.GetFiles(DIRECTORY))
                 {
                     File.Delete(filename);
@@ -62,23 +44,11 @@ namespace AccessForKioskReport
                 {
                     BlobContainerName = "soaktestreports",
                     BlobName = FILE_NAME,
-                    ExpiresOn = DateTime.UtcNow.AddMinutes(1),//Let SAS token expire after 5 minutes.
+                    ExpiresOn = DateTime.UtcNow.AddMinutes(1),//Let SAS token expire after 1 minute.
                 };
                 blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
                 TOKEN = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
                 URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + FILE_NAME + "?" + TOKEN;
-                //Response.Clear();
-                //Response.ContentType = "application/pdf";
-                //StringReader sr = new StringReader(Request.Form[hfGridHtml.UniqueID]);
-                //Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f);
-                //PdfWriter writer = PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
-                //pdfDoc.Open();
-                //XMLWorkerHelper.GetInstance().ParseXHtml(writer, pdfDoc, sr);
-                //Response.AddHeader("content-disposition", "attachment;filename=HTML.pdf");
-                //Response.Cache.SetCacheability(HttpCacheability.NoCache);
-                //Response.Write(pdfDoc);
-                //Response.End();
-
                 using (var reader = new PdfReader(URL))
                 {
                     if (!(Directory.Exists(DIRECTORY)))
@@ -97,19 +67,13 @@ namespace AccessForKioskReport
                         for (var i = 1; i <= reader.NumberOfPages; i++)
                         {
                             document.NewPage();
-
                             var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA_BOLD, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
                             var importedPage = writer.GetImportedPage(reader, i);
-
                             var contentByte = writer.DirectContent;
                             contentByte.BeginText();
-
-         
-
                             contentByte.EndText();
                             contentByte.AddTemplate(importedPage, 0, 0);
                         }
-
                         document.Close();
                         writer.Close();
                         Response.Clear();

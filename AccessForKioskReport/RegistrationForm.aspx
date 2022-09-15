@@ -5,48 +5,36 @@
   
 <html xmlns="http://www.w3.org/1999/xhtml">  
 <head runat="server">  
+    <meta name="viewport" content = "width =device-width, initial-scale = 1.0, maximum-scale = 1.0, user-scalable = no"/>
     <link href="Styles.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script type="text/javascript">
-    $(function () {
-        $("[id*=Button1]").click(function () {
-            $("[id*=hfGridHtml]").val($(".Container").html());
-        });
-    });
-</script>
     <title></title>  
 </head>  
-<body> <div class="layout">
-  
-    <div class="center">
-    <form id="form1" runat="server">  
-          <div id="logo"></div>
-        <div id="logo2"></div>
-        <div>  
-            <table class="auto-style1">  
-<%--                <tr><td><p id="title">Login</p></td></tr>--%>
-                <tr >  
-                    <td> 
-<%--                        <image src="images/lock.png" id="lockimage"></image>   --%>
-                        <asp:TextBox ID="TextBox3" runat="server" CssClass="textbox" placeholder="Password" TextMode="Password"></asp:TextBox>  
-                 </td>  
-                </tr>  
-           
-                <tr>  
-                    <td>  
-                        <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click"/>  
-                    </td>  
-                </tr>  
-            </table>  
-        </div> 
-            <asp:HiddenField ID="hfGridHtml" runat="server" />
+<body> 
+<div class="back">
 
-    </form>  
-        </div></div>
-      <asp:Panel ID="Panel1" runat="server" hidden="true" CssClass="Container">
-   <iframe runat="server" height="100%" width="100%" target='blank'  type="application/pdf" scrolling="auto"  id="iframe">     
-    </iframe>
-        </asp:Panel>
+
+  <div class="div-center">
+
+
+    <div class="content">
+      <form runat="server">
+       
+        <div class="form-group row">
+            <div id="logo" class="col-1"></div>
+            <div id="logo2" class="col-1"></div></div>
+          <div class="form-group">
+          <asp:TextBox type="password" class="form-control textbox" id="TextBox3" placeholder="Password" runat="server" required="true"/>
+        </div>
+          <div class="form-group">
+        <asp:Button type="submit" id="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login"/>
+              </div>
+      </form>
+
+    </div>
+
+
+</div>  </div>
+    
 
 </body>  
 </html>  
