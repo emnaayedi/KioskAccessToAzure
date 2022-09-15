@@ -19,10 +19,10 @@
     <div class="content container-fluid">
       <form runat="server">
        
-        <div class="form-group d-flex align-items-center">
-            <div class="d-inline-block">
-         <img class="col-6" src="/images/aquila-logo.png"  >
-                <img class="col-6 img" src="/images/aquila.png" />
+        <div class="form-group ">
+            <div class="inline-block  d-flex  justify-content-space-between">
+         <img  id="Aquila" src="/images/aquila-logo.png" />
+                <img  id="Edge" src="/images/aquila.png" />
             </div></div>
           <div class="form-group  d-flex align-items-center">
           <asp:TextBox type="password" class="form-control textbox" id="TextBox3" placeholder="Password" runat="server" required="true"/>
