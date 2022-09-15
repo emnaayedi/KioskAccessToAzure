@@ -16,16 +16,18 @@
   <div class="div-center">
 
 
-    <div class="content">
+    <div class="content container-fluid">
       <form runat="server">
        
-        <div class="form-group row">
-            <div id="logo" class="col-1"></div>
-            <div id="logo2" class="col-1"></div></div>
-          <div class="form-group">
+        <div class="form-group d-flex align-items-center">
+            <div class="d-inline-block">
+         <img class="col-6" src="/images/aquila-logo.png"  >
+                <img class="col-6 img" src="/images/aquila.png" />
+            </div></div>
+          <div class="form-group  d-flex align-items-center">
           <asp:TextBox type="password" class="form-control textbox" id="TextBox3" placeholder="Password" runat="server" required="true"/>
         </div>
-          <div class="form-group">
+          <div class="form-group  d-flex align-items-center">
         <asp:Button type="submit" id="Button1" class="btn btn-primary" runat="server" OnClick="Button1_Click" Text="Login"/>
               </div>
       </form>
