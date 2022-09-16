@@ -78,7 +78,8 @@ namespace AccessForKioskReport
                         writer.Close();
                         Response.Clear();
                         Response.ContentType = "application/pdf";
-                        Response.Redirect("RedirectToPDF.aspx?file="+ FILE_NAME); ;
+                        Session["pwd"] = "Aquila";
+                        Response.Redirect("RedirectToPDF.aspx?pdf="+ FILE_NAME); 
                     }
 
                     }

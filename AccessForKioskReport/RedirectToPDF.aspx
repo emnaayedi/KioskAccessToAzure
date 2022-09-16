@@ -8,13 +8,19 @@
 
     <link href="Styles.css" rel="stylesheet" type="text/css" />
  <script>
-     function LoadDoucment () {
+     function LoadDoucment() {
          var file = '<%=URL%>';
-         window.location.href = "/reports/" + file;
+         let invalidurl = '<%=RETURN%>';
+         if (invalidurl=="false") {
+             window.location.href = "reports/" + file;
+         }
+         else {
+             window.location.href = "RegistrationForm.aspx";
+
+         }
      }
 
  </script>
- 
     <title></title>  
 </head>  
 <body onload="LoadDoucment()" >
