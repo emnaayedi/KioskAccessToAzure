@@ -10,9 +10,9 @@
  <script>
      function LoadDoucment() {
          var file = '<%=URL%>';
-         let invalidurl = '<%=RETURN%>';
-         if (invalidurl=="false") {
-             window.location.href = "reports/" + file;
+         let oldURL = document.referrer.indexOf("?")==null;
+         if (oldURL == false) {
+             window.location.href = "/reports/" + file;
          }
          else {
              window.location.href = "RegistrationForm.aspx";

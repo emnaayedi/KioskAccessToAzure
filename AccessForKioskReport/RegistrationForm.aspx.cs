@@ -19,16 +19,20 @@ namespace AccessForKioskReport
             DIRECTORY = Server.MapPath("~/reports");
             if (Directory.Exists(DIRECTORY))
             {
-                foreach (string filename in Directory.GetFiles(DIRECTORY))
+                try
                 {
-                    File.Delete(filename);
+                    foreach (string filename in Directory.GetFiles(DIRECTORY))
+                    {
+                        File.Delete(filename);
+                    }
+                    // Check all child Directories and delete files  
+                    foreach (string subfolder in Directory.GetDirectories(DIRECTORY))
+                    {
+                        Directory.Delete(subfolder);
+                    }
+                    Directory.Delete(DIRECTORY);
                 }
-                // Check all child Directories and delete files  
-                foreach (string subfolder in Directory.GetDirectories(DIRECTORY))
-                {
-                    Directory.Delete(subfolder);
-                }
-                Directory.Delete(DIRECTORY);
+                catch { }
             }
         }
 
@@ -78,8 +82,7 @@ namespace AccessForKioskReport
                         writer.Close();
                         Response.Clear();
                         Response.ContentType = "application/pdf";
-                        Session["pwd"] = "Aquila";
-                        Response.Redirect("RedirectToPDF.aspx?pdf="+ FILE_NAME); 
+                        Server.Transfer("RedirectToPDF.aspx?pdf="+ FILE_NAME); ;
                     }
 
                     }
