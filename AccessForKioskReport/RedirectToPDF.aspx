@@ -7,7 +7,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
 
     <link href="Styles.css" rel="stylesheet" type="text/css" />
- <script>
+<%-- <script>
      function LoadDoucment() {
          var file = '<%=URL%>';
          let oldURL = document.referrer.indexOf("?")==null;
@@ -20,10 +20,10 @@
          }
      }
 
- </script>
+ </script>--%>
     <title></title>  
 </head>  
-<body onload="LoadDoucment()" >
+<body  >
 
 </body>  
 </html>  
