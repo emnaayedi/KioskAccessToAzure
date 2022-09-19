@@ -25,6 +25,8 @@ namespace AccessForKioskReport
                                         path.Length - path.LastIndexOf('=') - 1);
                     Server.TransferRequest("~/reports/" + idString);
                 }
+                Session.Abandon();
+                Session.RemoveAll();
             }
             else
             {
