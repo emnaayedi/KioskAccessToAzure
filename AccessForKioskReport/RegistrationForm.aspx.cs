@@ -26,6 +26,7 @@ namespace AccessForKioskReport
 
             if (TextBox3.Text == "Aquila2020#")
             {
+                Session["TextBox3"] = TextBox3.Text;
                 FILE_NAME = Request.QueryString["pdf"].ToString();
 
                 Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
