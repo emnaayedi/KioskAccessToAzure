@@ -24,6 +24,15 @@ namespace AccessForKioskReport
         protected global::System.Web.UI.WebControls.TextBox TextBox3;
 
         /// <summary>
+        /// alert control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label alert;
+
+        /// <summary>
         /// Button1 control.
         /// </summary>
         /// <remarks>

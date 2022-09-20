@@ -16,19 +16,18 @@
     background-size: cover;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 3px 7px rgba(0, 0, 0, 0.3), inset 0 1px rgba(255,255,255,1), inset 0 -3px 2px rgba(0,0,0,0.25);
     border-radius: 5px;
-   
     background-color: #fff;
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
-    margin-top:0;
+    margin-top: 0;
     margin: auto;
     max-width: 100%;
     max-height: 100%;
     overflow: auto;
-    padding:  0% 5% 2% 5% ;
+    padding: 0% 5% 2% 5%;
     display: table;
 }
 
@@ -43,7 +42,6 @@
     font-style: normal;
     font-weight: bold;
     font-family: 'Lato', Calibri, Arial, sans-serif;
- 
     /* identical to box height, or 145% */
     padding: 2% 1% 2% 5%;
     border: 1px solid #3D3F4D;
@@ -51,7 +49,15 @@
     color: #F2F2F2;
     text-shadow: 0 -1px rgba(0,0,0,0.3);
     text-decoration: none;
-    margin-top: 10%;
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+.label {
+    border-radius: 3px;
+justify-content:left;
+margin-left:9%;
+display:flex;
+
 }
 
 #Button1 {
@@ -66,7 +72,6 @@
     cursor: pointer;
     /* Font styles */
     font-family: 'Lato', Calibri, Arial, sans-serif;
-  
     text-align: center;
     font-weight: bold;
     background: linear-gradient(#34a5cf, #2a8ac4);
@@ -81,11 +86,8 @@
 div.content {
     display: table-cell;
     vertical-align: middle;
-
 }
 
-
-    
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -103,12 +105,18 @@ div.content {
         font-size: 20px;
         line-height: 36px;
     }
+
     #Aquila {
-        width: 45%;
+        width: 40%;
     }
 
     #Edge {
+        padding-left: 50px;
         width: 37%;
+    }
+    .label {
+        font-size: 20px;
+        line-height: 32px;
     }
 }
 
@@ -118,20 +126,27 @@ div.content {
         width: 100%;
         height: 100%;
     }
+
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
     }
+
     #Button1 {
         font-size: 30px;
         line-height: 42px;
     }
+
     #Aquila {
         width: 60%;
     }
 
     #Edge {
         width: 38%;
+    }
+    .label {
+        font-size: 20px;
+        line-height: 32px;
     }
 }
 
@@ -141,14 +156,18 @@ div.content {
         width: 80%;
         height: 80%;
     }
+
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
+        margin-top:100px;
     }
+
     #Button1 {
         font-size: 30px;
         line-height: 42px;
     }
+
     #Aquila {
         width: 250px;
     }
@@ -156,7 +175,10 @@ div.content {
     #Edge {
         width: 200px;
     }
- 
+    .label {
+        font-size: 36px;
+        line-height: 42px;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -165,14 +187,18 @@ div.content {
         width: 350px;
         height: 400px;
     }
+
     .textbox, .textbox:focus, .textbox:active {
         font-size: 25px;
         line-height: 20px;
+        margin-top: 120px;
     }
+
     #Button1 {
         font-size: 25px;
         line-height: 30px;
     }
+
     #Aquila {
         width: 190px;
     }
@@ -180,7 +206,10 @@ div.content {
     #Edge {
         width: 150px;
     }
- 
+    .label {
+        font-size: 20px;
+        line-height: 28px;
+    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -189,15 +218,18 @@ div.content {
         width: 350px;
         height: 400px;
     }
+
     .textbox, .textbox:focus, .textbox:active {
         font-size: 26px;
         line-height: 42px;
+        margin-top: 120px;
     }
 
     #Button1 {
         font-size: 26px;
         line-height: 42px;
     }
+
     #Aquila {
         width: 190px;
     }
@@ -205,5 +237,8 @@ div.content {
     #Edge {
         width: 150px;
     }
- 
+    .label {
+        font-size: 20px;
+        line-height: 36px;
+    }
 }
