@@ -99,11 +99,13 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 20px;
         line-height: 36px;
+        margin-top:20%;
     }
 
     #Button1 {
         font-size: 20px;
         line-height: 36px;
+     
     }
 
     #Aquila {
