@@ -49,8 +49,7 @@
     color: #F2F2F2;
     text-shadow: 0 -1px rgba(0,0,0,0.3);
     text-decoration: none;
-    margin-top: 2%;
-    margin-bottom:2%;
+    
 }
 .label {
     border-radius: 3px;
@@ -99,7 +98,8 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 20px;
         line-height: 36px;
-        margin-top:20%;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
     #Button1 {
@@ -132,6 +132,8 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
     #Button1 {
@@ -162,7 +164,8 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
-        margin-top:100px;
+        margin-top: 10%;
+        margin-bottom: 5%;
     }
 
     #Button1 {
@@ -193,7 +196,8 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 25px;
         line-height: 20px;
-        margin-top: 120px;
+        margin-top: 30%;
+        margin-bottom: 5%;
     }
 
     #Button1 {
@@ -224,7 +228,8 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 26px;
         line-height: 42px;
-        margin-top: 120px;
+        margin-top: 30%;
+        margin-bottom: 5%;
     }
 
     #Button1 {
