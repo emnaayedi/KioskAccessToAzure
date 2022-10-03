@@ -1,7 +1,6 @@
 ﻿.back {
     background: #e2e2e2;
     width: 100%;
-    position: absolute;
     top: 0;
     bottom: 0;
 }
@@ -98,7 +97,7 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 20px;
         line-height: 36px;
-        margin-top: 10%;
+        margin-top: 100px;
         margin-bottom: 5%;
     }
 
@@ -109,12 +108,13 @@ div.content {
     }
 
     #Aquila {
-        width: 40%;
+        padding-left: 5%;
+        width: 44%;
     }
 
     #Edge {
-        padding-left: 50px;
-        width: 37%;
+        padding-left: 2%;
+        width: 36%;
     }
     .label {
         font-size: 20px;
@@ -132,7 +132,7 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
-        margin-top: 10%;
+        margin-top: 120px;
         margin-bottom: 5%;
     }
 
@@ -142,11 +142,13 @@ div.content {
     }
 
     #Aquila {
-        width: 60%;
+        padding-left: 5%;
+        width: 45%;
     }
 
     #Edge {
-        width: 38%;
+        padding-left: 3%;
+        width: 34%;
     }
     .label {
         font-size: 20px;
@@ -174,11 +176,13 @@ div.content {
     }
 
     #Aquila {
-        width: 250px;
+        padding-left: 5%;
+        width: 45%;
     }
 
     #Edge {
-        width: 200px;
+        padding-left: 3%;
+        width: 34%;
     }
     .label {
         font-size: 36px;
@@ -206,11 +210,13 @@ div.content {
     }
 
     #Aquila {
-        width: 190px;
+        padding-left: 5%;
+        width: 45%;
     }
 
     #Edge {
-        width: 150px;
+        padding-left: 3%;
+        width: 34%;
     }
     .label {
         font-size: 20px;
@@ -238,11 +244,14 @@ div.content {
     }
 
     #Aquila {
-        width: 190px;
+     
+        padding-left: 5%;
+        width: 45%;
     }
 
     #Edge {
-        width: 150px;
+        padding-left: 3%;
+        width: 34%;
     }
     .label {
         font-size: 20px;
