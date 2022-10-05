@@ -97,7 +97,7 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 20px;
         line-height: 36px;
-        margin-top: 30px;
+        margin-top: 30%;
         margin-bottom: 5%;
     }
 
