@@ -36,13 +36,13 @@ namespace AccessForKioskReport
 
                 Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
                 {
-                    BlobContainerName = "soaktestreports",
+                    BlobContainerName = "drillmax-soak-test-reports",
                     BlobName = FILE_NAME,
                     ExpiresOn = DateTime.UtcNow.AddMinutes(1),//Let SAS token expire after 1 minute.
                 };
                 blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
                 TOKEN = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-                URL = "https://pdfreportsaquila.blob.core.windows.net/soaktestreports/" + FILE_NAME + "?" + TOKEN;
+                URL = "https://pdfreportsaquila.blob.core.windows.net/drillmax-soak-test-reports/" + FILE_NAME + "?" + TOKEN;
 
                 DIRECTORY = Server.MapPath("~/reports");
                 if (!Directory.Exists(DIRECTORY))

@@ -92,12 +92,12 @@ div.content {
     .div-center {
         width: 100%;
         height: 100%;
-    }
+         }
 
     .textbox, .textbox:focus, .textbox:active {
         font-size: 20px;
         line-height: 36px;
-        margin-top: 100px;
+        margin-top: 5px;
         margin-bottom: 5%;
     }
 
@@ -110,6 +110,8 @@ div.content {
     #Aquila {
         padding-left: 5%;
         width: 44%;
+        position: relative;
+        top: 0px;
     }
 
     #Edge {
@@ -142,6 +144,8 @@ div.content {
     }
 
     #Aquila {
+        position:relative;
+        top:0px;
         padding-left: 5%;
         width: 45%;
     }
@@ -176,6 +180,8 @@ div.content {
     }
 
     #Aquila {
+        position: relative;
+        top: 0px;
         padding-left: 5%;
         width: 45%;
     }
@@ -210,6 +216,8 @@ div.content {
     }
 
     #Aquila {
+        position: relative;
+        top: 0px;
         padding-left: 5%;
         width: 45%;
     }
@@ -244,7 +252,8 @@ div.content {
     }
 
     #Aquila {
-     
+        position: relative;
+        top: 0px;
         padding-left: 5%;
         width: 45%;
     }
