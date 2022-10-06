@@ -170,7 +170,7 @@ div.content {
     .textbox, .textbox:focus, .textbox:active {
         font-size: 30px;
         line-height: 42px;
-        margin-top: 50%;
+        margin-top: 30%;
         margin-bottom: 5%;
     }
 
