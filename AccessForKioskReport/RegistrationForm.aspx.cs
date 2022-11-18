@@ -13,6 +13,8 @@ namespace AccessForKioskReport
         System.Windows.Forms.Timer timerHideLabel = new System.Windows.Forms.Timer();
 
         public string FILE_NAME { get; set; }
+        public string CONTAINER_NAME { get; set; }
+
         public string URL { get; set; }
         public string TOKEN { get; set; }
         public string LOCAL_FILE_PATH { get; set; }
@@ -33,16 +35,16 @@ namespace AccessForKioskReport
             {
                 Session["TextBox3"] = TextBox3.Text;
                 FILE_NAME = Request.QueryString["pdf"].ToString();
-
+                CONTAINER_NAME= Request.QueryString["container"].ToString();
                 Azure.Storage.Sas.BlobSasBuilder blobSasBuilder = new Azure.Storage.Sas.BlobSasBuilder()
                 {
-                    BlobContainerName = "drillmax-soak-test-reports",
+                    BlobContainerName = CONTAINER_NAME,
                     BlobName = FILE_NAME,
                     ExpiresOn = DateTime.UtcNow.AddMinutes(1),//Let SAS token expire after 1 minute.
                 };
                 blobSasBuilder.SetPermissions(Azure.Storage.Sas.BlobSasPermissions.Read);//User will only be able to read the blob and it's properties
                 TOKEN = blobSasBuilder.ToSasQueryParameters(new StorageSharedKeyCredential("pdfreportsaquila", "QC+mUrcvLW8Mxajn4BgAbXijRIsE9Sg/dG/lM/yKlWEA22vwAH4w6cY2pBcqyugIzSkEbb8WrQlL+AStjuxszA==")).ToString();
-                URL = "https://pdfreportsaquila.blob.core.windows.net/drillmax-soak-test-reports/" + FILE_NAME + "?" + TOKEN;
+                URL = "https://pdfreportsaquila.blob.core.windows.net/"+CONTAINER_NAME+"/" + FILE_NAME + "?" + TOKEN;
 
                 DIRECTORY = Server.MapPath("~/reports");
                 if (!Directory.Exists(DIRECTORY))
@@ -82,7 +84,7 @@ namespace AccessForKioskReport
 
                 }
 
-                Response.Redirect("RedirectToPDF.aspx?pdf=" + FILE_NAME); ;
+                Response.Redirect("RedirectToPDF.aspx?pdf=" + FILE_NAME+"&container="+CONTAINER_NAME); ;
 
 
 
